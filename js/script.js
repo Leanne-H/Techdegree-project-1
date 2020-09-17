@@ -3,12 +3,12 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// For assistance: 
+// For assistance:
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
-/*** 
- * `quotes` array 
+/***
+ * `quotes` array
 ***/
 
 
@@ -31,3 +31,9 @@ project 1 - A Random Quote Generator
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
+/*
+  Notes Leanne: Must create at least 5 quotes (or objects)
+  For this project, I will need two functions: A 'getRandomQuote'-function and a 'printQuote'-function
+
+*/

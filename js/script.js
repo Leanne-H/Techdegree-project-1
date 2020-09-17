@@ -39,10 +39,7 @@ const quotes = [
     year: 2014
   }
 ];
-
-
-
-];
+console.log(quotes);
 
 /***
  * `getRandomQuote` function

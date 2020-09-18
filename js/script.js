@@ -47,8 +47,6 @@ const quotes = [
   }
 ];
 
-let html = '';
-
 //Section 2:
 // getRandomQuote-function:
 function getRandomQuote() {
@@ -59,6 +57,7 @@ getRandomQuote();
 
 // printQuote-function:
 function printQuote() {
+  let html = '';
   let myQuote = getRandomQuote(); //variable to store a random quote object from the getRandomQuote() function
   html += `<p class="quote">${myQuote.quote}</p><p class="source">${myQuote.source}`; //variable to store the HTML string.
   if (myQuote.citation !== '') {
@@ -68,13 +67,14 @@ function printQuote() {
     html += `<span class="year">${myQuote.year}</span>`;
   }
   html += `</p>`;
+  document.getElementById('quote-box').innerHTML = html;
+  console.log(html);
   return html;
 }
 printQuote();
 
 //Section 3:
 //The content of the string-variable html is pushed to the web page.
-document.getElementById('quote-box').innerHTML = html;
 
 /***
  * click event listener for the print quote button

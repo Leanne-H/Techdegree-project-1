@@ -68,7 +68,6 @@ function printQuote() {
     html += `<span class="year">${myQuote.year}</span>`;
   }
   html += `</p>`;
-  // console.log(html);
   return html;
 }
 printQuote();

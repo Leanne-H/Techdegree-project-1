@@ -9,9 +9,9 @@ project 1 - A Random Quote Generator
   additional information about the quote, namely in what context it was stated (value for 'citation') and in what year it was stated.
 
   This code has the following set-up:
-      - Section 1: The object 'quotes' and the string-variable html are defined;
-      - Section 2: The two functions (called getRandomQuote and printQuote) are defined
-      and the values of the randomly selected quote (stored in the variable html) are printed to the web page using the ID 'quote-box'.
+      - Section 1: The object 'quotes' is defined;
+      - Section 2: The two functions (called getRandomQuote and printQuote) are defined and the values of the randomly selected quote (stored in
+      the variable html) are printed to the web page using the ID 'quote-box'.
 
   If something is unclear in this code, please contact me.
 */
@@ -60,22 +60,22 @@ function printQuote() {
   let html = '';
   let myQuote = getRandomQuote(); //variable to store a random quote object from the getRandomQuote() function
   html += `<p class="quote">${myQuote.quote}</p><p class="source">${myQuote.source}`; //variable to store the HTML string.
-  if (myQuote.citation !== '') {
+
+  // if-statement sees if the property 'citation' in object 'myQuote' has a value. If it does, the codeline below runs
+  if ('citation' in myQuote) {
     html += `<span class="citation">${myQuote.citation}</span>`;
   }
-  if (myQuote.year !== '') {
+  // if-statement sees if the property 'citation' in object 'myQuote' has a value. If it does, the codeline below runs
+  if ('year' in myQuote) {
     html += `<span class="year">${myQuote.year}</span>`;
   }
   html += `</p>`;
+
+  // pushing the created string within html to the web page
   document.getElementById('quote-box').innerHTML = html;
-  console.log(html);
   return html;
 }
 printQuote();
 
-/***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
-***/
-
+// code line below is used to print a new quote to the web page
 document.getElementById('load-quote').addEventListener("click", printQuote, false);

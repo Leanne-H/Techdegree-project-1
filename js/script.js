@@ -10,8 +10,8 @@ project 1 - A Random Quote Generator
 
   This code has the following set-up:
       - Section 1: The object 'quotes' and the string-variable html are defined;
-      - Section 2: The two functions (called getRandomQuote and printQuote) are defined;
-      - Section 3: The values of the randomly selected quote (stored in the variable html) are printed to the web page using the ID 'quote-box'.
+      - Section 2: The two functions (called getRandomQuote and printQuote) are defined
+      and the values of the randomly selected quote (stored in the variable html) are printed to the web page using the ID 'quote-box'.
 
   If something is unclear in this code, please contact me.
 */
@@ -72,9 +72,6 @@ function printQuote() {
   return html;
 }
 printQuote();
-
-//Section 3:
-//The content of the string-variable html is pushed to the web page.
 
 /***
  * click event listener for the print quote button
